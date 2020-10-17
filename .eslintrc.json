@@ -1,0 +1,85 @@
+{
+  "env": {
+    "node": false,
+    "browser": true,
+    "es6": true
+  },
+  "extends": ["plugin:react/recommended", "prettier", "airbnb"],
+  "globals": {
+    "Atomics": "readonly",
+    "SharedArrayBuffer": "readonly"
+  },
+  "parser": "babel-eslint",
+  "parserOptions": {
+    "ecmaFeatures": {
+      "jsx": true
+    },
+    "ecmaVersion": 2018,
+    "sourceType": "module"
+  },
+  "plugins": ["react", "prettier"],
+  "rules": {
+    "jsx-a11y/click-events-have-key-events": "off",
+    "jsx-a11y/no-noninteractive-element-interactions": "off",
+    "consistent-return": "off",
+    "no-alert": "off",
+    "no-console": "off",
+    "no-await-in-loop": "off",
+    "no-restricted-syntax": "off",
+    "comma-dangle": "off",
+    "quotes": [2, "single", "avoid-escape"],
+    "linebreak-style": 0,
+    "jsx-a11y/label-has-associated-control": [
+      2,
+      {
+        "components": [],
+        "required": {
+          "some": ["nesting", "id"]
+        },
+        "allowChildren": true
+      }
+    ],
+    "react/forbid-prop-types": 0,
+    "react/no-array-index-key": 0,
+    "react/jsx-props-no-spreading": 0,
+    "react/jsx-filename-extension": [
+      1,
+      {
+        "extensions": [".js", ".jsx"]
+      }
+    ],
+    "import/prefer-default-export": "off",
+    "react/prop-types": "off",
+    "no-underscore-dangle": [
+      "error",
+      { "allow": ["_id", "__REDUX_DEVTOOLS_EXTENSION__"] }
+    ],
+    "import/no-cycle": "off",
+    "import/no-extraneous-dependencies": [
+      "error",
+      {
+        "devDependencies": [".storybook/**", "src/**/**/stories.js"]
+      }
+    ],
+    "react/jsx-one-expression-per-line": "off",
+    "no-unused-expressions": [
+      "error",
+      {
+        "allowTernary": true
+      }
+    ],
+    "react/style-prop-object": "off",
+    "global-require": "off",
+    "jsx-quotes": "off"
+  },
+  "settings": {
+    "react": {
+      "version": "detect"
+    },
+    "import/resolver": {
+      "node": {
+        "moduleDirectory": ["node_modules", "src/"]
+      }
+    }
+  }
+}
