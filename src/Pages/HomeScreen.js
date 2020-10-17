@@ -48,6 +48,7 @@ export default function HomeScreen() {
     if (room) {
       io.on('seek', (time) => {
         player.current.seek(time);
+        player.current.play();
       });
     }
   }, [room]);
